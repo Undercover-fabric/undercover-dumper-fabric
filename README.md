@@ -1,4 +1,4 @@
-# undercover-dumper
+# undercover-dumper-fabric
 
 Java agent. Intercepts class loading, writes `.class` files to disk.
 
@@ -37,5 +37,5 @@ Options are appended after the output dir, separated by `|`:
 
 JDK 8+ to build. Launcher must allow custom JVM arguments.
 
-Site: https://undercover-fabric.github.io/undercover-dumper/
-Repo: https://github.com/Undercover-fabric/undercover-dumper
+Site: https://undercover-fabric.github.io/undercover-dumper-fabric/
+Repo: https://github.com/Undercover-fabric/undercover-dumper-fabric

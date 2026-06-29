@@ -1,5 +1,5 @@
 (function () {
-  var repo = "Undercover-fabric/undercover-dumper";
+  var repo = "Undercover-fabric/undercover-dumper-fabric";
   var host = window.location.hostname;
   var parts = window.location.pathname.split("/").filter(Boolean);
 
