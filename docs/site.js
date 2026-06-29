@@ -1,14 +1,10 @@
 (function () {
-  var repo = null;
+  var repo = "Undercover-fabric/undercover-dumper";
   var host = window.location.hostname;
   var parts = window.location.pathname.split("/").filter(Boolean);
 
   if (host.endsWith(".github.io") && parts.length >= 1) {
     repo = host.replace(".github.io", "") + "/" + parts[0];
-  }
-
-  if (!repo) {
-    return;
   }
 
   var src = document.getElementById("dl-src");

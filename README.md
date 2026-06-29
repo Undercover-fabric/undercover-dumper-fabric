@@ -37,4 +37,5 @@ Options are appended after the output dir, separated by `|`:
 
 JDK 8+ to build. Launcher must allow custom JVM arguments.
 
-Site: `https://YOUR_USERNAME.github.io/undercover-dumper/` (after publishing — see `PUBLISH.md`).
+Site: https://undercover-fabric.github.io/undercover-dumper/
+Repo: https://github.com/Undercover-fabric/undercover-dumper
