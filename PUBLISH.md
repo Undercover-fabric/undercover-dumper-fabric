@@ -7,8 +7,7 @@ On GitHub: **New repository** -> name it `undercover-dumper` -> public -> no REA
 ## 2. Push this folder
 
 ```bat
-cd C:\Users\poopm\OneDrive\Desktop\undercover-dumper
-git init
+cd path\to\undercover-dumper
 git add .
 git commit -m "Initial release"
 git branch -M main
