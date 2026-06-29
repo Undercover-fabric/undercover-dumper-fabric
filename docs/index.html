@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>undercover-dumper</title>
+  <meta name="description" content="Java agent for capturing Minecraft mod classes at runtime.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <header>
+      <h1>undercover-dumper</h1>
+      <p>Java agent that hooks class loading and writes <code>.class</code> files to disk.</p>
+      <p class="actions">
+        <a class="btn" id="dl-jar" href="../ClassDumpAgent.jar" download>Download ClassDumpAgent.jar</a>
+        <a class="btn secondary" id="dl-src" href="https://github.com/">Source</a>
+      </p>
+    </header>
+
+    <section>
+      <h2>Setup</h2>
+      <ol>
+        <li>Download and extract the release.</li>
+        <li>Run <code>setup.bat</code> or copy a JVM line from below.</li>
+        <li>Replace <code>MOD_DUMPER_DIR</code> with the install path.</li>
+        <li>Paste into your launcher profile under Custom JVM Arguments.</li>
+        <li>Launch Minecraft with the mod loaded.</li>
+        <li>Output appears in <code>dumped_classes/</code>.</li>
+        <li>Run <code>pack_dump.bat</code> to build <code>dumped.jar</code>.</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>JVM arguments</h2>
+      <pre><code id="arg-default">-javaagent:MOD_DUMPER_DIR\ClassDumpAgent.jar=MOD_DUMPER_DIR\dumped_classes</code></pre>
+      <pre><code>-javaagent:MOD_DUMPER_DIR\ClassDumpAgent.jar=MOD_DUMPER_DIR\dumped_classes|include:com/yourmod,dev/author</code></pre>
+      <pre><code>-javaagent:MOD_DUMPER_DIR\ClassDumpAgent.jar=MOD_DUMPER_DIR\dumped_classes|mode:all</code></pre>
+      <pre><code>-javaagent:MOD_DUMPER_DIR\ClassDumpAgent.jar=MOD_DUMPER_DIR\dumped_classes|mode:obfuscated</code></pre>
+    </section>
+
+    <section>
+      <h2>Modes</h2>
+      <table>
+        <thead>
+          <tr><th>Mode</th><th>Flag</th><th>Dumps</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>mod</td><td>default</td><td>obfuscated runtime names + include prefixes</td></tr>
+          <tr><td>obfuscated</td><td>mode:obfuscated</td><td>short/hash-like names</td></tr>
+          <tr><td>include</td><td>mode:include</td><td>include prefixes only</td></tr>
+          <tr><td>all</td><td>mode:all</td><td>non-excluded classes</td></tr>
+        </tbody>
+      </table>
+      <p>Options after the output path, separated by <code>|</code>: <code>include:</code>, <code>exclude:</code>, <code>mode:</code></p>
+    </section>
+
+    <section>
+      <h2>Files</h2>
+      <ul>
+        <li><code>ClassDumpAgent.jar</code> - agent</li>
+        <li><code>build.bat</code> - compile from source</li>
+        <li><code>setup.bat</code> - print JVM args</li>
+        <li><code>pack_dump.bat</code> - pack dump to jar</li>
+      </ul>
+    </section>
+
+    <footer>
+      <p>MIT License. JDK 8+ to build. Launcher must support custom JVM arguments.</p>
+    </footer>
+  </main>
+  <script src="site.js"></script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+build/
+META-INF/
+dumped_classes/*
+!dumped_classes/.gitkeep
+dumped.jar
+*.class

@@ -1,0 +1,5 @@
+-javaagent:MOD_DUMPER_DIR\ClassDumpAgent.jar=MOD_DUMPER_DIR\dumped_classes
+-javaagent:MOD_DUMPER_DIR\ClassDumpAgent.jar=MOD_DUMPER_DIR\dumped_classes|include:com/yourmod,dev/author
+-javaagent:MOD_DUMPER_DIR\ClassDumpAgent.jar=MOD_DUMPER_DIR\dumped_classes|mode:all
+-javaagent:MOD_DUMPER_DIR\ClassDumpAgent.jar=MOD_DUMPER_DIR\dumped_classes|mode:obfuscated
+-javaagent:MOD_DUMPER_DIR\ClassDumpAgent.jar=MOD_DUMPER_DIR\dumped_classes|mode:all|exclude:some/lib/package
